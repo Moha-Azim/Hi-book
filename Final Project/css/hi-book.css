@@ -1,0 +1,578 @@
+/* Start Global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "open-sans", sans-serif;
+  background-color: #0e0e0e;
+}
+ul {
+  list-style: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #111111;
+}
+/*Ex-Small devices (landscape phones, 576px and less) */
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 550px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 75%;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 75%;
+  }
+}
+
+/* // Extra large devices (large desktops, 2000px and up) */
+@media (min-width: 2000px) {
+  .container {
+    width: 1920px;
+  }
+}
+/* End Global rules */
+
+/* Start header */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* End header*/
+
+/* Start Landing */
+.landing {
+  background-color: #0e0e0e;
+}
+.landing .container {
+  background-color: #0e0e0e;
+}
+
+.testsize {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+}
+.testsize .overlay11 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+  border-radius: 15px;
+}
+
+.landing .text {
+  color: white;
+  text-align: center;
+  margin-top: 50;
+  padding-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .landing .text {
+    font-size: 25px;
+    padding-top: 100px;
+  }
+}
+
+/*End Landing */
+
+/* Start types */
+
+.types .container .booktype {
+  padding: 60px;
+}
+
+.types .container .booktype ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.types .container .booktype ul li {
+  margin-top: 25px;
+}
+.types .container .booktype ul li a {
+  background-color: transparent;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 10px 20px;
+  text-align: center;
+  font-size: 25px;
+  color: #9d9d9d;
+  border: 1px solid #9d9d9d;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.types .container .booktype ul li a:hover {
+  background-color: #414141;
+}
+/* End types */
+
+/* Start books show */
+.bookshow .container {
+  padding-bottom: 150px;
+}
+.bookshow .container .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bookshow .container .list .list-element {
+  position: relative;
+  max-width: 25%;
+  flex: 25%;
+  display: none;
+}
+
+.bookshow .container .list .list-element img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bookshow .container .list .list-element .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 50%);
+}
+.bookshow .container .list .list-element:hover .overlay {
+  opacity: 1;
+}
+.bookshow .container .list .list-element .textforbook {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#loadmore {
+  margin: 50px auto 0px;
+  display: table;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #414141;
+  border-radius: 4px;
+  background-color: #252525;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 50px;
+}
+.bookshow .container .list .list-element:nth-child(-n + 12) {
+  display: block;
+}
+
+@media (max-width: 400px) {
+  .bookshow .container .list .list-element {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  .bookshow .container .list .list-element {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .bookshow .container .list .list-element {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 768px) {
+  .bookshow .container .list .list-element {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 1024px) {
+  .bookshow .container .list .list-element {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+/* End books show */
+
+/* Start footer */
+
+.footer .container .allfooter {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #414141;
+  height: fit-content;
+  width: 100%;
+  color: #4a4a4a;
+  justify-content: space-around;
+  padding-top: 90px;
+  line-height: 25px;
+  padding-bottom: 30px;
+}
+.footer .container .allfooter div {
+  margin-top: 20px;
+}
+
+.footer .container .allfooter .copyright {
+  text-align: center;
+}
+
+.footer .container .allfooter .copyright h3 {
+  font-size: 30px;
+  padding-bottom: 10px;
+  color: #dadada;
+}
+.footer .container .allfooter .office p {
+  color: #dadada;
+  font-weight: 400;
+  font-size: 18px;
+}
+.footer .container .allfooter .office i {
+  margin-top: 10px;
+  margin-left: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer .container .allfooter .sitelink {
+  display: flex;
+  flex-direction: column;
+}
+.footer .container .allfooter .sitelink h4 {
+  color: #dadada;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.footer .container .allfooter .sitelink a {
+  margin-top: 5px;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.footer .container .allfooter .suggestion h4 {
+  color: #dadada;
+  font-weight: 400;
+  font-size: 18px;
+}
+.footer .container .allfooter .suggestion form .thetext {
+  width: 200px;
+  height: 50px;
+  background-color: #414141;
+  border: none;
+  padding: 10px;
+  color: #dadada;
+  outline: none;
+}
+
+.footer .container .allfooter .suggestion form .thebutton {
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 400px) {
+  .footer .container .allfooter div {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  .footer .container .allfooter div {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .footer .container .allfooter div {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 768px) {
+  .footer .container .allfooter div {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 1024px) {
+  .footer .container .allfooter div {
+    flex: 25%;
+    max-width: 25%;
+  }
+}
+
+/* End footer */
+
+/* start Book Detailes*/
+.bookdetail .container {
+  padding: 50px;
+}
+
+.bookdetail .container .handdetail {
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: flex;
+}
+
+.bookdetail .container .handdetail .leftpic {
+  width: 300px;
+  height: 400px;
+}
+
+.bookdetail .container .handdetail .rightinfo {
+  margin-left: 40px;
+  color: white;
+}
+.bookdetail .container .handdetail .rightinfo h1 {
+  margin-bottom: 30px;
+}
+
+.bookdetail .container .handdetail .rightinfo .thedown {
+  text-decoration: none;
+  background-color: #ff0040;
+  color: #ffffff;
+  padding: 8px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bookdetail .container .handdetail .rightinfo .textdisc {
+  margin-top: 30px;
+  line-height: 25px;
+}
+.bookdetail .container .handdetail .rightinfo .textdisc .discTitle {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.bookdetail .container .handdetail .rightinfo .thedown:hover {
+  background-color: #eb003b;
+  color: #ffffff;
+}
+
+@media (max-width: 400px) {
+  .bookdetail .container .handdetail {
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 400px) {
+  .bookdetail .container .handdetail {
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 576px) {
+  .bookdetail .container .handdetail {
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 768px) {
+  .bookdetail .container .handdetail {
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and less) */
+@media (min-width: 1024px) {
+  .bookdetail .container .handdetail {
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+/* End Book Detailes*/
